@@ -1,0 +1,34 @@
+# Local authentication material
+*.pfx
+*.p12
+*.pem
+*.key
+*.cer
+*.crt
+*.snk
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+local.settings.json
+appsettings.Development.json
+
+# Script output, reports, and logs
+output/
+reports/
+logs/
+*.csv
+*.log
+*.clixml
+*.jsonl
+
+# PowerShell editor and test output
+TestResults/
+*.coverage.xml
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
