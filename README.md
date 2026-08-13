@@ -38,9 +38,19 @@ own values interactively or through your secure automation environment.
 
 ```text
 templates/    Starting points for public-safe scripts
+scripts/      Read-only reusable operations tools
 tests/        Pester checks for public safety and script behaviour
 docs/         Design notes and publication checklists
 ```
+
+## Available scripts
+
+- [Export-EntraApplicationHygiene.ps1](scripts/Identity/Export-EntraApplicationHygiene.ps1):
+  read-only inventory of Entra application registrations, service principals,
+  owners, and credential expiry.
+- [Export-EntraGuestHygiene.ps1](scripts/Identity/Export-EntraGuestHygiene.ps1):
+  read-only guest inventory and review classification. It does not delete,
+  disable, or modify guest accounts.
 
 ## License
 
