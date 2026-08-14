@@ -1,0 +1,35 @@
+name: New audit idea
+description: Propose a reusable, read-only Microsoft 365 audit.
+title: "Audit: "
+labels: ["audit"]
+body:
+  - type: markdown
+    attributes:
+      value: "Use placeholders only. Do not add customer, tenant, or credential information."
+  - type: textarea
+    id: question
+    attributes:
+      label: What decision should this audit support?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What evidence should the audit collect?
+    validations:
+      required: true
+  - type: textarea
+    id: permissions
+    attributes:
+      label: Minimum permissions and Microsoft services
+    validations:
+      required: true
+  - type: dropdown
+    id: mutation
+    attributes:
+      label: Does the proposed tool change tenant state?
+      options:
+        - No, it must remain read-only
+        - Yes, but only as a separate approved follow-up
+    validations:
+      required: true

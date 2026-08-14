@@ -41,6 +41,7 @@ templates/    Starting points for public-safe scripts
 scripts/      Read-only reusable operations tools
 tests/        Pester checks for public safety and script behaviour
 docs/         Design notes and publication checklists
+labs/         Safe, fictional proof-of-concept work before publication
 ```
 
 ## Available scripts
@@ -51,6 +52,13 @@ docs/         Design notes and publication checklists
 - [Export-EntraGuestHygiene.ps1](scripts/Identity/Export-EntraGuestHygiene.ps1):
   read-only guest inventory and review classification. It does not delete,
   disable, or modify guest accounts.
+
+## Working method
+
+Read [the working method](docs/WORKFLOW.md) before adding a new tool. It uses
+five stages: explore, prototype, harden, validate, and publish. The GitHub
+workflow validates PowerShell parsing, PSScriptAnalyzer errors, and Pester
+tests on pull requests and changes to `main`.
 
 ## License
 
