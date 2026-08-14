@@ -38,7 +38,9 @@ jobs:
       - name: Analyze PowerShell scripts
         shell: pwsh
         run: |
-          $findings = Invoke-ScriptAnalyzer -Path scripts, templates -Recurse -Severity Error
+          $findings = @('scripts', 'templates') |
+            Where-Object { Test-Path $_ } |
+            ForEach-Object { Invoke-ScriptAnalyzer -Path $_ -Recurse -Severity Error }
           if ($findings) {
             $findings | Format-Table -AutoSize | Out-String | Write-Error
             exit 1
